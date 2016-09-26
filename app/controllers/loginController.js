@@ -5,19 +5,19 @@ define(['app'], function (app) {
     var injectParams = ['$location', '$routeParams', 'authService'];
 
     var LoginController = function ($location, $routeParams, authService) {
-        var vm = this,
+        var scope = this,
             path = '/';
 
-        vm.email = null;
-        vm.password = null;
-        vm.errorMessage = null;
+        scope.email = null;
+        scope.password = null;
+        scope.errorMessage = null;
 
-        vm.login = function () {
-            authService.login(vm.email, vm.password).then(function (status) {
+        scope.login = function () {
+            authService.login(scope.email, scope.password).then(function (status) {
                 //$routeParams.redirect will have the route
                 //they were trying to go to initially
                 if (!status) {
-                    vm.errorMessage = 'Unable to login';
+                    scope.errorMessage = 'Unable to login';
                     return;
                 }
 
