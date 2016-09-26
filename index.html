@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS + RequireJS Example</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+	<link href="css/modern-business.css" rel="stylesheet" />
+</head>
+<body data-ng-cloak>
+    
+    <div ng-include='"templates/header.html"'></div>
+	<div ng-view></div>
+	<div ng-include='"templates/footer.html"'></div>
+
+    <!-- 3rd party libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+    <script src="js/angular-ui-bootstrap.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+    <!-- Load custom scripts via RequireJS -->
+    <script src="js/require.js" data-main="js/main"></script>
+
+</body>
+</html>
